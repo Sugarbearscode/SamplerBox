@@ -173,6 +173,12 @@ def MidiCallback(message, time_stamp):
     note = message[1] if len(message) > 1 else None
     midinote = note
     velocity = message[2] if len(message) > 2 else None
+    # filter midi messages
+    if MIDI_CHAN = 0:                 # if the MIDI_CHAN is set to zero then allow messages through (midi channel should be 1-16)
+        None 
+    elif messagechannel != MIDI_CHAN: # if the MIDI_CHAN is NOT zero then check to see if it should be filtered  
+        return 
+    # filter midi messages end
     if messagetype == 9 and velocity == 0:
         messagetype = 8
     if messagetype == 9:    # Note on
