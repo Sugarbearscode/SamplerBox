@@ -6,7 +6,7 @@
 AUDIO_DEVICE_ID = 2                     # change this number to use another soundcard
 SAMPLES_DIR = "/media/"                 # The root directory containing the sample-sets. Example: "/media/" to look for samples on a USB stick / SD card
 MAX_POLYPHONY = 80                      # This can be set higher, but 80 is a safe value
-MIDI_CHAN = 10                          # set the midi channel
+MIDI_CHAN = 0                           # set the midi channel (1 to 16) or zero to allow everything
 USE_BUTTONS = True                      # Set to True to use momentary buttons (connected to RaspberryPi's GPIO pins) to change preset
 USE_I2C_7SEGMENTDISPLAY = True          # Set to True to use a 7-segment display via I2C
 USE_SERIALPORT_MIDI = True              # Set to True to enable MIDI IN via SerialPort (e.g. RaspberryPi's GPIO UART pins)
